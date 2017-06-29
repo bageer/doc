@@ -48,7 +48,7 @@
 	@Controller
 	@RequestMapping("/manage/upload")
 	public class FileUploadController {
-	
+	    
 	    @Value(value = "#{config['upload.pic.allowed.extension']}")
 	    private String picAllowExtension;
 	    @Value(value = "#{config['upload.pic.allowed.maxSize']}")
@@ -130,4 +130,7 @@
 	    }
 	}
 
+参数说明：
+ 
+ @Value(value = "#{config['upload.pic.allowed.extension']}")这些参数一般都是定义到resource.properties文件中相对应的web项目src/main/resources下
 	
